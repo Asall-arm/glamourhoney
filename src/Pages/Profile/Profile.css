@@ -1,0 +1,32 @@
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.profile-title {
+  color:  var(--gold2);
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.profile-info {
+  text-align: center;
+  padding: 20px;
+  color: #333;
+  background: linear-gradient(135deg,  var(--gold2) 0%,  var(--gold) 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  font-size: 18px;
+}
+
+.profile-info p {
+  margin: 12px 0;
+  font-weight: 500;
+}

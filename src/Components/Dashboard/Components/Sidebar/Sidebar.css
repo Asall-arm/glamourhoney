@@ -1,0 +1,40 @@
+.sidebar {
+    position: fixed;
+    background-color: var(--gold);
+    width: 205px;
+    height: 100vh;
+    flex: 1;
+    flex-direction: column;
+}
+
+.sidebar-title {
+    font: 1.4rem;
+    color: black;
+    padding: 15px;
+    text-align: right;
+    border-bottom: 2px solid var(--gold2);
+}
+
+.sidebar-links {
+    margin-top: 20px;
+    padding: 10px;
+    list-style-type: none;
+    width: 100%;
+    text-decoration: none;
+}
+
+.sidebar-links .nav-link {
+    color: var(--white);
+}
+
+.sidebar-links .nav-link:hover {
+    background-color: var(--gold2);
+    color: var(--white);
+}
+
+.sidebar-links .nav-link.active {
+    background-color: var(--gold2);
+    width: 100%;
+    margin-bottom: 20px;
+    color: black;
+}

@@ -1,0 +1,38 @@
+.product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 16px;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-image {
+    max-width: 170px;
+    height: auto;
+}
+
+.product-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.product-price {
+    color:  var(--gold);
+    font-size: 1.2em;
+}
+
+.add-button {
+    background-color: var(--gold2); 
+    color: black; 
+    border: none;
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    font-size: 16px;
+    margin-top: 10px; 
+  }
+  
+  .add-button:hover {
+    background-color:  var(--gold); 
+  }

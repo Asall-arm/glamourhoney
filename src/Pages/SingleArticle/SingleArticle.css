@@ -1,0 +1,24 @@
+.article-container {
+    margin: 20px;
+    pad: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .article-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .article-title {
+    font-size: 2em;
+    margin: 20px 0;
+  }
+  
+  .article-content {
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  

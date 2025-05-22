@@ -1,0 +1,40 @@
+.header-section {
+  position: relative;
+  text-align: center; 
+}
+
+.header-image {
+  width: 100%;
+  height: auto; 
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(16, 14, 14); 
+  z-index: 1; 
+}
+
+.button-group {
+  margin-top: 20px; 
+}
+
+.header-title {
+  background-color: var(--blue);
+  border: none; /* حذف حاشیه */
+  color: white; /* رنگ متن سفید */
+  padding: 15px 30px; /* فاصله داخلی */
+  text-align: center; /* متن وسط‌چین */
+  text-decoration: none; /* حذف خط زیر */
+  display: inline-block; /* نمایش دکمه به صورت بلوک */
+  font-size: 16px; /* اندازه فونت */
+  border-radius: 5px; /* گوشه‌های گرد */
+  cursor: pointer; /* تغییر نشانگر ماوس به دست */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.header-title:hover {
+  background-color: var(--purple);
+  transform: scale(1.05);
+}

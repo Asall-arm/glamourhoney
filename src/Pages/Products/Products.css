@@ -1,0 +1,59 @@
+.product-container {
+  margin: 20px;
+  display: flex;
+  flex-direction: column; /* برای قرار دادن بخش‌ها به صورت عمودی */
+  align-items: center; /* برای وسط‌چین کردن بخش‌ها */
+}
+
+.product-section {
+  margin-bottom: 40px; /* فاصله بین بخش‌های مختلف */
+  width: 100%; /* عرض کامل */
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+
+}
+
+.view-all-button {
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: var(--gold); /* رنگ پس‌زمینه دکمه زرد */
+  color: black; /* رنگ متن دکمه مشکی */
+border: none;
+  border-radius: 5px; /* گرد کردن گوشه‌های دکمه */
+  cursor: pointer; /* تغییر نشانگر ماوس */
+  margin-right: 20px; /* فاصله بین دکمه و عنوان */
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* برای وسط‌چین کردن کارت‌ها */
+  gap: 20px; /* فاصله بین کارت‌ها */
+}
+
+.product-card {
+  border: 1px solid #ccc; /* حاشیه کارت */
+  border-radius: 8px; /* گرد کردن گوشه‌ها */
+  padding: 10px;
+  width: 200px; /* عرض کارت‌ها را تنظیم کنید */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* سایه کارت */
+  text-align: center; /* متن را وسط چین کنید */
+}
+
+.product-image {
+  width: 170px; /* اندازه تصویر به 170px تغییر داده شد */
+  height: auto; /* حفظ نسبت ابعاد تصویر */
+  border-radius: 8px; /* گرد کردن گوشه تصویر */
+}
+
+.product-name {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.product-price {
+  color: #888; /* رنگ قیمت */
+}

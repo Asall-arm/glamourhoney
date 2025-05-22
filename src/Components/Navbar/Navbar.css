@@ -1,0 +1,15 @@
+.btnn {
+    display: inline-block; /* برای نمایش به صورت دکمه */
+    padding: 6px 15px; /* فاصله داخلی */
+    margin: 5px; /* فاصله خارجی */
+    background-color: #007bff; /* رنگ پس‌زمینه */
+    color: white; /* رنگ متن */
+    text-align: center; /* تراز کردن متن */
+    text-decoration: none; /* حذف خط زیر متن */
+    border-radius: 5px; /* گوشه‌های گرد */
+    transition: background-color 0.3s; /* انیمیشن تغییر رنگ */
+}
+
+.btnn:hover {
+    background-color: #0056b3; /* رنگ پس‌زمینه در حالت هاور */
+}
