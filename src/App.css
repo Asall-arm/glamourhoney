@@ -1,48 +1,112 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-/* 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-} */
-/* HTML5 display-role reset for older browsers */
-/* article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+/* -----------------------------
+   فونت‌های فارسی  CDN
+----------------------------- */
+@import url('https://cdn.fontcdn.ir/Font/Persian/Vazirmatn/Vazirmatn.css');
+@import url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css');
+@import url('https://cdn.fontcdn.ir/Font/Persian/Estedad/Estedad.css');
+
+/* -----------------------------
+    تعریف متغیرها (CSS Variables)
+----------------------------- */
+:root {
+  /* --- Primary Palette --- */
+  --color-primary: #1A1A1A;     /* مشکی کلاسیک */
+  --color-honey: #D4AF37;      /* طلایی لاکچری */
+  --color-neutral: #EFEFEF;     /* خاکستری روشن */
+
+  /* --- Extended Colors --- */
+  --color-bg: #ffffff;
+  --color-text: #2e2e2e;
+  --color-muted: #999999;
+  --color-border: #e0e0e0;
+
+  /* --- Hover / States --- */
+  --color-hover: #bfa133;
+  --color-button-bg: var(--color-honey);
+  --color-button-text: #ffffff;
+  --color-button-hover: #c89f2a;
+
+  /* --- Font Families --- */
+  --font-primary: 'Vazirmatn', sans-serif;
+  --font-secondary: 'Estedad', sans-serif;
+  --font-title: 'Shabnam', sans-serif;
+
+  /* --- Spacing & Radius --- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  --padding-sm: 0.5rem;
+  --padding-md: 1rem;
+  --padding-lg: 2rem;
 }
+
+/* -----------------------------
+    Reset سبک‌دهی مرورگر
+----------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* -----------------------------
+    بیس استایل برای المان‌های پایه
+----------------------------- */
 body {
-	line-height: 1;
+  font-family: var(--font-primary);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  font-size: 1rem;
+  direction: rtl;
 }
-ol, ul {
-	list-style: none;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  color: var(--color-primary);
 }
-blockquote, q {
-	quotes: none;
+
+a {
+  color: var(--color-honey);
+  text-decoration: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+a:hover {
+  color: var(--color-hover);
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-} */
+
+button {
+  font-family: inherit;
+  border: none;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: var(--color-button-hover);
+}
+
+/* -----------------------------
+    Utility Classes (دلخواه)
+----------------------------- */
+.text-center {
+  text-align: center;
+}
+.text-muted {
+  color: var(--color-muted);
+}
+.bg-dark {
+  background-color: var(--color-primary);
+}
+.bg-light {
+  background-color: var(--color-neutral);
+}
+.radius-md {
+  border-radius: var(--radius-md);
+}

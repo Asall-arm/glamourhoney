@@ -1,8 +1,15 @@
-# React + Vite
+عنوان پروژه: سایت فروشگاهی گلامور هانی همراه با مقاله
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+پکیج‌های اضافه شده:
+bootstrap, react bootstrap, react icons, react router dom, redux, react redux, ...
 
-Currently, two official plugins are available:
+برای ران شدن پروژه: 
+داخل کامند پرامپت دستور زیر را وارد کنید:
+cd react
+npm run dev
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+برای دسترسی به دیتابیس پروژه:
+داخل کامند پرامپت یا ترمینال لوکال وی‌اس کد، دستورات زیر را به ترتیب وارد کنید:
+1. cd src
+2. npm run server
+

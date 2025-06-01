@@ -1,61 +1,61 @@
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from 'react-router-dom';
-import './Navbar.css'
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import './Navbar.css';
 
-function NavScrollExample() {
+function Navbar() {
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container fluid>
-        <Navbar.Brand href="#">
-        <img
-              alt=""
-              src="/public/logo.jpeg"
-              width="50"
-              className="d-inline-block align-top p-1"
-            />
-          Glamour Honey</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
-            <Nav.Link href="/">صفحه اصلی</Nav.Link>
-            <Nav.Link href="#action2">مقاله‌ها</Nav.Link>
-            <NavDropdown title=" دسته‌بندی محصولات" id="navbarScrollingDropdown">
-            <NavDropdown.Item onClick={() => navigate('/products')}>تمام محصولات</NavDropdown.Item>
-              <NavDropdown.Item onClick={() => navigate('/products/allwomenproduct')}>زنانه</NavDropdown.Item>
-              <NavDropdown.Item  onClick={() => navigate('/products/allmenproduct')}>
-                مردانه
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => navigate('/products/allkidsproduct')}>
-                بچگانه
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="عبارت مد نظر را وارد کنید..."
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success" className='m-1'>جست و جو</Button>
-          </Form>
-          <Link to="/register"  className='btnn'>ثبت نام</Link>
-          <Link to="/login"  className='btnn'>ورود</Link>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <header className="navbar">
+      <div className="navbar-container">
+        <div className="navbar-brand" onClick={() => navigate('/')}>
+          <img src="/logo.jpeg" alt="Glamour Honey" className="logo" />
+          <span>Glamour Honey</span>
+        </div>
+
+        {/* Burger Icon */}
+        <div className="burger" onClick={() => setMenuOpen(!menuOpen)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        {/* Links + Buttons */}
+        <div className={`navbar-links-container ${menuOpen ? "open" : ""}`}>
+          <nav className="navbar-links">
+            <Link to="/" className="nav-link">صفحه اصلی</Link>
+            <Link to="/articles" className="nav-link">مقاله‌ها</Link>
+            <div className="dropdown">
+              <span className="dropdown-toggle">دسته‌بندی محصولات</span>
+              <div className="dropdown-menu">
+                <span onClick={() => navigate('/products')}>تمام محصولات</span>
+                <span onClick={() => navigate('/products/allwomenproduct')}>زنانه</span>
+                <span onClick={() => navigate('/products/allmenproduct')}>مردانه</span>
+                <span onClick={() => navigate('/products/allkidsproduct')}>بچگانه</span>
+              </div>
+            </div>
+          </nav>
+
+          <div className="navbar-right">
+            <form className="search-form">
+              <input
+                type="text"
+                placeholder="عبارت مد نظر را وارد کنید..."
+                className="search-input"
+              />
+              <button type="submit" className="search-button">جست‌وجو</button>
+            </form>
+
+            <div className="auth-buttons">
+              <Link to="/register" className="btnn">ثبت‌نام</Link>
+              <Link to="/login" className="btnn">ورود</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
   );
 }
 
-export default NavScrollExample;
+export default Navbar;

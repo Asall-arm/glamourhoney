@@ -1,66 +1,49 @@
-import React, { use } from "react";
-import FooterItem from "./FooterItem/FooterItem";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import "./Footer.css";
 import EndlessFooter from "./EndlessFooter";
 
-export default function Footer() {
-  const navigate = useNavigate();
+const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-widgets">
-          <div className="row">
-            <FooterItem title="درباره ما">
-              <p className="footer-widgets__text">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              </p>
-            </FooterItem>
+    <footer>
+      {/* بالا */}
+      <div className="footer-top">
+        <div className="footer-column">
+          <h4>درباره ما</h4>
+          <p>
+            گلمور هانی برندی لوکس در دنیای مد است؛ ترکیبی از سبک کلاسیک و مدرن با کیفیتی بی‌نظیر.
+          </p>
+        </div>
 
-            <FooterItem title="آخرین مقالات">
-              <div className="footer-widgets__links">
-                <a href="#" className="footer-widgets__link"onClick={() => navigate('/Articles/singlearticle')}>
-مقاله اول
-                </a>
-                <a href="#" className="footer-widgets__link"onClick={() => navigate('/Articles/singlearticle')}>
-                مقاله دوم
-                </a>
-                <a href="#" className="footer-widgets__link"onClick={() => navigate('/Articles/singlearticle')}>
-                مقاله سوم
-                </a>
-              </div>
-            </FooterItem>
+        <div className="footer-column">
+          <h4>آخرین مقالات</h4>
+          <ul>
+            <li><a href="#">مقاله اول</a></li>
+            <li><a href="#">مقاله دوم</a></li>
+          </ul>
+        </div>
 
-            <FooterItem title="محصولات ما">
-              <div className="row">
-                <div className="col-6">
-                  <a href="#" className="footer-widgets__link"onClick={() => navigate('/singleproduct')}>
-                    محصول اول
-                  </a>
-                </div>
+        <div className="footer-column">
+          <h4>محصولات ما</h4>
+          <ul>
+            <li><a href="#">محصول اول</a></li>
+            <li><a href="#">محصول دوم</a></li>
+            <li><a href="#">محصول سوم</a></li>
+            <li><a href="#">محصول چهارم</a></li>
+          </ul>
+        </div>
 
-                <div className="col-6">
-                  <a href="#" className="footer-widgets__link"onClick={() => navigate('/singleproduct')}>
-                  محصول دوم
-                  </a>
-                </div>
-
-                <div className="col-6">
-                  <a href="#" className="footer-widgets__link"onClick={() => navigate('/singleproduct')}>
-                  محصول سوم
-                  </a>
-                </div>
-                <div className="col-6">
-                  <a href="#" className="footer-widgets__link"onClick={() => navigate('/singleproduct')}>
-                  محصول چهارم
-                  </a>
-                </div>
-              </div>
-            </FooterItem>
-          </div>
+        <div className="footer-column newsletter">
+          <h4>عضویت در خبرنامه</h4>
+          <form>
+            <input type="email" placeholder="ایمیل خود را وارد کنید" />
+            <button type="submit">عضویت</button>
+          </form>
         </div>
       </div>
+
       <EndlessFooter />
     </footer>
   );
-}
+};
+
+export default Footer;

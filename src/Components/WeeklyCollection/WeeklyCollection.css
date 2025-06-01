@@ -1,0 +1,58 @@
+.weekly-collection {
+  padding: var(--padding-lg) var(--padding-md);
+  background-color: var(--color-bg);
+  text-align: center;
+}
+
+.weekly-title {
+  font-family: var(--font-title);
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  border-bottom: 2px solid var(--color-honey);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.weekly-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.weekly-collection-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.weekly-collection-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.weekly-collection-item:hover img {
+  transform: scale(1.05);
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(26, 26, 26, 0.75);
+  color: var(--color-button-text);
+  font-family: var(--font-secondary);
+  padding: var(--padding-sm);
+  font-size: 1rem;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.weekly-collection-item:hover .caption {
+  background: rgba(212, 175, 55, 0.85); /* طلایی روشن */
+  color: var(--color-primary); /* مشکی */
+}

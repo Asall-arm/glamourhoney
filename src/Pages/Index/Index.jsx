@@ -2,18 +2,20 @@ import React from 'react'
 import Header from '../../Components/Header/Header'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
-import Second from '../../Components/Second/Second'
-import Third from '../../Components/Third/Third'
+import Collection from '../../Components/Collection/Collection'
+import WeeklyCollection from '../../Components/WeeklyCollection/WeeklyCollection'
 
 import './Index.css'
+import Testimonials from '../../Components/Testimonials/Testimonials'
 
 const Index = () => {
   return (
     <div>
       <Navbar />
       <Header />
-      <Second />
-      <Third />
+      <Collection />
+      <WeeklyCollection />
+      <Testimonials />
       <Footer />
     </div>
   )

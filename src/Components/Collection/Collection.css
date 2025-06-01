@@ -1,0 +1,42 @@
+.collections-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--padding-md);
+    padding: var(--padding-lg);
+    background-color: var(--color-bg);
+    font-family: var(--font-primary);
+  }
+  
+  .collection-card {
+    position: relative;
+    height: 260px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border: 2px solid var(--color-honey);
+    transition: transform 0.3s ease;
+  }
+  
+  .collection-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .overlay-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(26, 26, 26, 0.7), transparent); /* مشکی کلاسیک با شفافیت */
+    color: var(--color-button-text);
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    text-align: center;
+    padding: var(--padding-md);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .collection-card:hover .overlay-text {
+    background: linear-gradient(to top, rgba(26, 26, 26, 0.9), transparent);
+    color: var(--color-honey);
+  }
