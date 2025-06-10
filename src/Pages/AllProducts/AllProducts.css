@@ -1,7 +1,15 @@
+h2 {
+  font-family: var(--font-title);
+  color: var(--color-primary);
+  text-align: center;
+  margin: var(--padding-lg) 0;
+}
+
 .product-list {
-    margin: 20px;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--padding-lg);
+  padding: var(--padding-lg) var(--padding-md);
+  justify-items: center;
+  background-color: var(--color-neutral);
+}

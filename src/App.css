@@ -1,4 +1,4 @@
-
+@import "tailwindcss";
 /* -----------------------------
    فونت‌های فارسی  CDN
 ----------------------------- */
@@ -11,9 +11,9 @@
 ----------------------------- */
 :root {
   /* --- Primary Palette --- */
-  --color-primary: #1A1A1A;     /* مشکی کلاسیک */
-  --color-honey: #D4AF37;      /* طلایی لاکچری */
-  --color-neutral: #EFEFEF;     /* خاکستری روشن */
+  --color-primary: #1A1A1A;    
+  --color-honey: #D4AF37;      
+  --color-neutral: #EFEFEF;   
 
   /* --- Extended Colors --- */
   --color-bg: #ffffff;

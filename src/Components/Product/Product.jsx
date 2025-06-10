@@ -1,9 +1,11 @@
 import React from "react";
 import "./Product.css";
+import { useNavigate } from "react-router-dom";
 
 const Product = ({ product }) => {
-  const { title, price, image } = product;
-
+  const { name, price, image } = product;
+  const navigate = useNavigate()
+  
   const addToCart = () => {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const existingItem = cart.find((item) => item.id === product.id);
@@ -21,7 +23,7 @@ const Product = ({ product }) => {
   return (
     <div className="product">
       <img src={image} alt={name} className="product-image" />
-      <h2 className="product-title">{name}</h2>
+      <h2 onClick={() => navigate(`/singleproduct/${product.id}`)} className="product-title">{name}</h2>
       <p className="product-price">{price} تومان</p>
       <button className="add-button" onClick={addToCart}>
         افزودن به سبد خرید

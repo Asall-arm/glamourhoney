@@ -7,26 +7,16 @@ const SingleArticle = () => {
   return (
     <>
       <Navbar />
-      <div className="article-container">
-        <img
-          src="../../../public/logo.jpeg" 
-          alt="Article"
-          className="article-image"
-        />
-        <h1 className="article-title">عنوان مقاله اول</h1>
-        <p className="article-content">
+
+      <div className="single-article-layout">
+        <div className="article-main">
+          <img src="/article.jpeg" alt="Article" className="article-image" />
+          <h1 className="article-title">عنوان مقاله اول</h1>
+          <p className="article-content">
         اینجا متن مقاله قرار می‌گیرد. شما می‌توانید هر متنی را که می‌خواهید به عنوان محتوای مقاله وارد کنید. 
         این متن می‌تواند شامل اطلاعات مختلفی باشد که شما می‌خواهید به خوانندگان خود ارائه دهید. 
         در این مقاله، ما به بررسی تأثیرات مثبت و منفی فناوری بر روی زندگی روزمره انسان‌ها خواهیم پرداخت. 
         فناوری به سرعت در حال پیشرفت است و این تغییرات بر روی شیوه‌های ارتباطی، کار و تفریح ما تأثیر گذاشته است.
-      </p>
-      <p className="article-content">
-        یکی از بزرگ‌ترین مزایای فناوری، سهولت در ارتباطات است. امروزه، افراد می‌توانند به راحتی از طریق شبکه‌های اجتماعی، ایمیل و پیام‌رسان‌ها با یکدیگر ارتباط برقرار کنند. 
-        این امر نه تنها باعث افزایش سرعت ارتباطات شده، بلکه امکان برقراری ارتباط با افراد در سراسر جهان را نیز فراهم کرده است.
-      </p>
-      <p className="article-content">
-        با این حال، استفاده بیش از حد از فناوری می‌تواند منجر به انزوا و کاهش تعاملات اجتماعی واقعی شود. بسیاری از افراد ترجیح می‌دهند به جای ملاقات حضوری، از طریق فضای مجازی با یکدیگر در ارتباط باشند. 
-        این موضوع می‌تواند تأثیرات منفی بر روی روابط انسانی و سلامت روانی افراد داشته باشد.
       </p>
       <p className="article-content">
         همچنین، فناوری در زمینه‌های مختلفی مانند آموزش و پرورش، پزشکی و تجارت نیز تغییرات عمده‌ای ایجاد کرده است. 
@@ -40,6 +30,40 @@ const SingleArticle = () => {
         در نهایت، می‌توان گفت که فناوری همواره یک شمشیر دو لبه بوده است. از یک سو، مزایا و فرصت‌های بی‌شماری را برای ما فراهم کرده است، 
         اما از سوی دیگر، چالش‌ها و خطراتی نیز به همراه دارد. بنابراین، مهم است که با آگاهی و مسئولیت از فناوری استفاده کنیم تا بتوانیم از مزایای آن بهره‌مند شویم و آسیب‌های احتمالی را کاهش دهیم.
       </p>
+      
+
+
+          <div className="article-navigation">
+            <button className="nav-button">← مقاله قبلی</button>
+            <button className="nav-button">مقاله بعدی →</button>
+          </div>
+        </div>
+
+        <aside className="article-sidebar">
+          <section className="sidebar-section">
+            <h3 className="sidebar-title">پست‌های مرتبط</h3>
+            <ul className="sidebar-list">
+              <li><a href="#">تأثیر هوش مصنوعی بر سلامت</a></li>
+              <li><a href="#">فناوری و آموزش در آینده</a></li>
+              <li><a href="#">زندگی دیجیتال و سلامت روان</a></li>
+            </ul>
+          </section>
+
+          <section className="sidebar-section">
+            <h3 className="sidebar-title">دسته‌بندی‌ها</h3>
+            <ul className="sidebar-list">
+              <li>فناوری</li>
+              <li>سلامت</li>
+              <li>آموزش</li>
+            </ul>
+          </section>
+
+          <section className="sidebar-section">
+            <h3 className="sidebar-title">نویسنده</h3>
+            <p className="sidebar-author">نوشته شده توسط <strong>عسل رحیمی</strong>  
+            |   خرداد ۱۴۰۴</p>
+          </section>
+        </aside>
       </div>
 
       <Footer />

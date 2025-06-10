@@ -1,32 +1,69 @@
-.profile-page {
+.profile-container {
+  padding: var(--padding-lg);
+  font-family: var(--font-primary);
+  background-color: var(--color-bg);
+  color: var(--color-text);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
   justify-content: center;
-  padding: 40px 20px;
 }
 
-.profile-title {
-  color:  var(--gold2);
-  font-size: 28px;
-  margin-bottom: 30px;
+.profile-card {
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  max-width: 650px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
 }
 
-.profile-info {
-  text-align: center;
-  padding: 20px;
-  color: #333;
-  background: linear-gradient(135deg,  var(--gold2) 0%,  var(--gold) 100%);
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 500px;
-  font-size: 18px;
+.profile-image-wrapper img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid var(--color-honey);
+  object-fit: cover;
 }
 
-.profile-info p {
-  margin: 12px 0;
-  font-weight: 500;
+.profile-details {
+  flex: 1;
+}
+
+.profile-name {
+  font-family: var(--font-title);
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.profile-email,
+.profile-phone,
+.profile-address,
+.profile-score,
+.profile-total,
+.profile-bio {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--color-muted);
+}
+
+.edit-button {
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-secondary);
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: var(--color-button-hover);
+  transform: translateY(-2px);
 }

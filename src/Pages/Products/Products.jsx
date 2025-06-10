@@ -35,26 +35,19 @@ const Products = () => {
       <Navbar />
 
       <div className="product-container">
+        
         {Object.keys(products).map((category) => (
           <div key={category} className="product-section">
             <div className="section-header">
               <h2>
+                
+
                 {category === "womenproduct"
                   ? "محصولات زنانه"
                   : category === "menproduct"
                   ? "محصولات مردانه"
                   : "محصولات بچگانه"}
               </h2>
-            </div>
-            <div className="product-grid">
-              {products[category].map((product) => (
-                <Product
-                  key={product.id}
-                  product={product}
-                  // price={product.price}
-                  // image={product.image}
-                />
-              ))}
             </div>
             <button
               className="view-all-button"
@@ -68,8 +61,24 @@ const Products = () => {
                 }
               }}
             >
-              مشاهده تمام محصولات...
+              مشاهده تمام  {category === "womenproduct"
+                  ? "محصولات زنانه"
+                  : category === "menproduct"
+                  ? "محصولات مردانه"
+                  : "محصولات بچگانه"}
             </button>
+
+            <div className="product-grid">
+              {products[category].map((product) => (
+                <Product
+                  key={product.id}
+                  product={product}
+                  // price={product.price}
+                  // image={product.image}
+                />
+              ))}
+            </div>
+            
           </div>
         ))}
       </div>

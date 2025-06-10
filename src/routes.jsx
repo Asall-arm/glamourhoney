@@ -15,6 +15,7 @@ import Error from "./Components/Error/Error";
 import Profile from "./Pages/Profile/Profile";
 import Cart from "./Pages/Cart/Cart";
 import Checkout from "./Pages/Checkout/Checkout";
+// import ThemeCustomizer from "./Components/Dashboard/Components/ThemeCustomizer";
 
 const routes = [
   { path: "/", element: <Index /> },
@@ -26,7 +27,7 @@ const routes = [
   { path: "/products/allkidsproduct", element: <AllProducts /> },
   { path: "/Articles", element: <Articles /> },
   { path: "/Articles/singlearticle", element: <SingleArticle /> },
-  { path: "/singleproduct", element: <SingleProduct /> },
+  { path: "/singleproduct/:id", element: <SingleProduct /> },
   { path: "/profile", element: <Profile /> },
   { path: "/cart", element: <Cart /> },
   { path: "/checkout", element: <Checkout /> },
@@ -39,6 +40,7 @@ const routes = [
   { path: "/dashboard/comments", element: <Comments /> },
   { path: "/dashboard/users", element: <Users /> },
   { path: "/dashboard/orders", element: <Orders /> },
+  // { path: "/dashboard/theme", element: <ThemeCustomizer /> },
 
   { path: "*", element: <Error /> },
 ];

@@ -1,71 +1,76 @@
 import React, { useEffect, useState } from "react";
-import "./Cart.css";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
+import "./Cart.css";
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/cart")
-      .then((res) => res.json())
-      .then((data) => setCartItems(data));
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCartItems(cart);
   }, []);
 
-  const removeItem = (id) => {
-    setCartItems(cartItems.filter((item) => item.id !== id));
+  const handleRemove = (id) => {
+    const updatedCart = cartItems.filter((item) => item.id !== id);
+    setCartItems(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
-  const totalPrice = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
+  const updateQuantity = (id, delta) => {
+    const updatedCart = cartItems.map((item) =>
+      item.id === id
+        ? {
+            ...item,
+            quantity: Math.max(1, item.quantity + delta),
+          }
+        : item
+    );
+    setCartItems(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+  };
+
+  const totalPrice = cartItems.reduce((acc, item) => {
+    const cleanedPrice = +item.price.replace(/[^0-9]/g, "");
+    return acc + cleanedPrice * item.quantity;
+  }, 0);
 
   return (
     <>
       <Navbar />
-      <div className="cart-page">
-        <h1 className="cart-title">سبد خرید</h1>
-
-        {cartItems.length ? (
+      <div className="cart-container">
+        <h1>سبد خرید شما</h1>
+        {cartItems.length === 0 ? (
+          <p className="empty-cart">سبد خرید خالی است</p>
+        ) : (
           <>
-            <table className="cart-table">
-              <thead>
-                <tr>
-                  <th>نام محصول</th>
-                  <th>تعداد</th>
-                  <th>قیمت واحد</th>
-                  <th>قیمت کل</th>
-                  <th>عملیات</th>
-                </tr>
-              </thead>
-              <tbody>
-                {cartItems?.map((item) => (
-                  <tr key={item.id}>
-                    <td>{item.name}</td>
-                    <td>{item.quantity}</td>
-                    <td>{item.price} تومان</td>
-                    <td>{item.price * item.quantity} تومان</td>
-                    <td>
-                      <button className="cart-btn" onClick={() => removeItem(item.id)}>حذف</button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-
+          <div className="cart-left">
+            <div className="cart-list">
+              {cartItems.map((item) => (
+                <div key={item.id} className="cart-item">
+                  <img src={item.image} alt={item.name} />
+                  <div className="item-details">
+                    <h2>{item.name}</h2>
+                    <p>{item.price}</p>
+                    <div className="quantity-control">
+                      <button onClick={() => updateQuantity(item.id, -1)}>-</button>
+                      <span>{item.quantity}</span>
+                      <button onClick={() => updateQuantity(item.id, 1)}>+</button>
+                    </div>
+                    <button className="remove-btn" onClick={() => handleRemove(item.id)}>🗑 حذف</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+            </div>
             <div className="cart-summary">
-              <p>
-                <strong>مبلغ کل:</strong> {totalPrice} تومان
-              </p>
-              <button className="checkout-btn">ثبت سفارش</button>
+              <h3>مبلغ کل: {totalPrice.toLocaleString()} تومان</h3>
+              <button className="checkout-btn">ادامه فرایند خرید</button>
             </div>
           </>
-        ) : (
-          <p className="empty-cart">سبد خرید شما خالی است.</p>
         )}
       </div>
-      <Footer />{" "}
+      <Footer />
     </>
   );
 };

@@ -40,99 +40,99 @@
     {
       "id": "1",
       "name": "محصول ۱",
-      "price": "100,000 تومان",
+      "price": "100,000 ",
       "image": "../../../public/logo.jpeg",
       "count": "100",
-      "popularity": "100",
+      "popularity": "70",
       "sale": "200,000",
       "colors": "4"
     },
     {
       "id": "2",
       "name": "محصول 2",
-      "price": "110,000 تومان",
+      "price": "110,000 ",
       "image": "../../../public/logo.jpeg",
       "count": "160",
-      "popularity": "100",
+      "popularity": "70",
       "sale": "600,000",
       "colors": "2"
     },
     {
       "id": "3",
       "name": "محصول 3",
-      "price": "90,000 تومان",
+      "price": "90,000 ",
       "image": "../../../public/logo.jpeg",
       "count": "80",
-      "popularity": "100",
+      "popularity": "70",
       "sale": "200,000",
       "colors": "6"
     },
     {
       "id": "4",
       "name": "محصول ۴",
-      "price": "400,000 تومان",
+      "price": "400,000 ",
       "image": "../../../public/logo.jpeg",
       "count": "100",
-      "popularity": "100",
+      "popularity": "70",
       "sale": "200,000",
       "colors": "4"
     },
     {
       "id": "5",
       "name": "محصول ۵",
-      "price": "500,000 تومان",
+      "price": "500,000 ",
       "image": "../../../public/logo.jpeg",
       "count": "100",
-      "popularity": "100",
+      "popularity": "70",
       "sale": "200,000",
       "colors": "4"
     },
     {
       "id": "6",
       "name": "محصول ۶",
-      "price": "600,000 تومان",
+      "price": "600,000 ",
       "image": "../../../public/logo.jpeg",
       "count": "100",
-      "popularity": "100",
+      "popularity": "70",
       "sale": "200,000",
       "colors": "4"
     },
     {
       "id": "7",
       "name": "محصول ۷",
-      "price": "700,000 تومان",
+      "price": "700,000 ",
       "image": "../../../public/logo.jpeg",
       "count": "100",
-      "popularity": "100",
+      "popularity": "70",
       "sale": "200,000",
       "colors": "4"
     },
     {
       "id": "8",
       "name": "محصول ۸",
-      "price": "800,000 تومان",
+      "price": "800,000 ",
       "image": "../../../public/logo.jpeg",
       "count": "100",
-      "popularity": "100",
+      "popularity": "70",
       "sale": "200,000",
       "colors": "4"
     },
     {
       "id": "9",
       "name": "محصول ۹",
-      "price": "900,000 تومان",
+      "price": "900,000 ",
       "image": "../../../public/logo.jpeg",
       "count": "100",
-      "popularity": "100",
+      "popularity": "70",
       "sale": "200,000",
       "colors": "4"
     },
     {
       "id": "10",
       "name": "محصول ۱۰",
-      "price": "1,000,000 تومان",
+      "price": "1,000,000 ",
       "image": "../../../public/logo.jpeg",
-      "count": "100",
+      "count": "70",
       "popularity": "100",
       "sale": "200,000",
       "colors": "4"
@@ -140,9 +140,9 @@
     {
       "id": "11",
       "name": "محصول ۱۱",
-      "price": "800,000 تومان",
+      "price": "800,000 ",
       "image": "../../../public/logo.jpeg",
-      "count": "100",
+      "count": "70",
       "popularity": "100",
       "sale": "200,000",
       "colors": "4"
@@ -188,6 +188,7 @@
   ],
   "users": [
     {
+      "avatar": "../public/prof.jpg",
       "firstname": "عسل",
       "lastname": "رحیمی",
       "username": "Asal",
@@ -196,7 +197,7 @@
       "email": "asal@email.com",
       "address": "تهران خیابان کوچه",
       "score": "4.3",
-      "buy": "4,100,000",
+      "totalPurchase": "4,100,000",
       "id": "1"
     },
     {
@@ -209,7 +210,7 @@
       "email": "soroush@email.com",
       "address": "تهران خیابان کوچه",
       "score": "4.3",
-      "buy": "3,900,000"
+      "totalPurchase": "3,900,000"
     },
     {
       "id": "3",
@@ -221,7 +222,7 @@
       "email": "arad@email.com",
       "address": "تهران خیابان کوچه",
       "score": "4.3",
-      "buy": "1,200,000"
+      "totalPurchase": "1,200,000"
     },
     {
       "id": "4",
@@ -233,7 +234,7 @@
       "email": "ali@email.com",
       "address": "تهران خیابان کوچه",
       "score": "4.3",
-      "buy": "2,600,000"
+      "totalPurchase": "2,600,000"
     }
   ],
   "cms": [
@@ -329,31 +330,36 @@
   "cart": [
     {
       "id": "1",
-      "name": "نام محصول",
+      "name": "محصول 1",
+      "image": "../public/logo.jpeg",
       "quantity": "2",
       "price": 500
     },
     {
       "id": "2",
-      "name": "نام محصول",
+      "name": "محصول 2",
+      "image": "../public/logo.jpeg",
       "quantity": "1",
       "price": 100
     },
     {
       "id": "3",
-      "name": "نام محصول",
+      "name": "محصول 3",
+      "image": "../public/logo.jpeg",
       "quantity": "3",
       "price": 230
     },
     {
       "id": "4",
-      "name": "نام محصول",
+      "name": "محصول 4",
+      "image": "../public/logo.jpeg",
       "quantity": "1",
       "price": 210
     },
     {
       "id": "5",
-      "name": "نام محصول",
+      "name": "محصول 5",
+      "image": "../public/logo.jpeg",
       "quantity": "2",
       "price": 175
     }
@@ -364,95 +370,128 @@
         {
           "id": "1",
           "name": "محصول زنانه 1",
-          "price": "100,000 تومان",
+          "price": "100,000 ",
           "image": "../../../public/logo.jpeg"
         },
         {
           "id": "2",
           "name": "محصول زنانه 2",
-          "price": "150,000 تومان",
+          "price": "150,000 ",
           "image": "../../../public/logo.jpeg"
         },
         {
           "id": "3",
           "name": "محصول زنانه 3",
-          "price": "200,000 تومان",
+          "price": "200,000 ",
           "image": "../../../public/logo.jpeg"
         },
         {
           "id": "4",
-          "name": "محصول زنانه 2",
-          "price": "150,000 تومان",
+          "name": "محصول زنانه 4",
+          "price": "150,000 ",
           "image": "../../../public/logo.jpeg"
         },
         {
           "id": "5",
-          "name": "محصول زنانه 3",
-          "price": "200,000 تومان",
+          "name": "محصول زنانه 5",
+          "price": "200,000 ",
+          "image": "../../../public/logo.jpeg"
+        },{
+          "id": "6",
+          "name": "محصول زنانه 6",
+          "price": "150,000 ",
+          "image": "../../../public/logo.jpeg"
+        },
+        {
+          "id": "7",
+          "name": "محصول زنانه 7",
+          "price": "200,000 ",
           "image": "../../../public/logo.jpeg"
         }
       ],
       "menproduct": [
         {
-          "id": "6",
-          "name": "محصول مردانه 1",
-          "price": "120,000 تومان",
-          "image": "../../../public/logo.jpeg"
-        },
-        {
-          "id": "7",
-          "name": "محصول مردانه 2",
-          "price": "180,000 تومان",
-          "image": "../../../public/logo.jpeg"
-        },
-        {
           "id": "8",
-          "name": "محصول مردانه 3",
-          "price": "220,000 تومان",
+          "name": "محصول مردانه 8",
+          "price": "120,000 ",
           "image": "../../../public/logo.jpeg"
         },
         {
           "id": "9",
-          "name": "محصول مردانه 2",
-          "price": "180,000 تومان",
+          "name": "محصول مردانه 9",
+          "price": "180,000 ",
           "image": "../../../public/logo.jpeg"
         },
         {
           "id": "10",
-          "name": "محصول مردانه 3",
-          "price": "220,000 تومان",
+          "name": "محصول مردانه 10",
+          "price": "220,000 ",
+          "image": "../../../public/logo.jpeg"
+        },
+        {
+          "id": "11",
+          "name": "محصول مردانه 11",
+          "price": "180,000 ",
+          "image": "../../../public/logo.jpeg"
+        },
+        {
+          "id": "12",
+          "name": "محصول مردانه 12",
+          "price": "220,000 ",
+          "image": "../../../public/logo.jpeg"
+        },{
+          "id": "13",
+          "name": "محصول مردانه 13",
+          "price": "150,000 ",
+          "image": "../../../public/logo.jpeg"
+        },
+        {
+          "id": "14",
+          "name": "محصول مردانه 14",
+          "price": "200,000 ",
           "image": "../../../public/logo.jpeg"
         }
       ],
       "kidsproduct": [
         {
-          "id": "11",
-          "name": "محصول بچگانه 1",
-          "price": "80,000 تومان",
-          "image": "../../../public/logo.jpeg"
-        },
-        {
-          "id": "12",
-          "name": "محصول بچگانه 2",
-          "price": "90,000 تومان",
-          "image": "../../../public/logo.jpeg"
-        },
-        {
-          "id": "13",
-          "name": "محصول بچگانه 3",
-          "price": "70,000 تومان",
-          "image": "../../../public/logo.jpeg"
-        },
-        {
-          "id": "14",
-          "name": "محصول بچگانه 2",
-          "price": "90,000 تومان",
-          "image": "../../../public/logo.jpeg"
-        },
-        {
           "id": "15",
-          "name": "محصول بچگانه 3",
-          "price": "70,000 تومان",
+          "name": "محصول بچگانه 15",
+          "price": "80,000 ",
+          "image": "../../../public/logo.jpeg"
+        },
+        {
+          "id": "16",
+          "name": "محصول بچگانه 16",
+          "price": "90,000 ",
+          "image": "../../../public/logo.jpeg"
+        },
+        {
+          "id": "17",
+          "name": "محصول بچگانه 17",
+          "price": "70,000 ",
+          "image": "../../../public/logo.jpeg"
+        },
+        {
+          "id": "18",
+          "name": "محصول بچگانه 18",
+          "price": "90,000 ",
+          "image": "../../../public/logo.jpeg"
+        },
+        {
+          "id": "19",
+          "name": "محصول بچگانه 19",
+          "price": "70,000 ",
+          "image": "../../../public/logo.jpeg"
+        },{
+          "id": "20",
+          "name": "محصول بچگانه 20",
+          "price": "150,000 ",
+          "image": "../../../public/logo.jpeg"
+        },
+        {
+          "id": "21",
+          "name": "محصول بچگانه 21",
+          "price": "200,000 ",
           "image": "../../../public/logo.jpeg"
         }
       ]

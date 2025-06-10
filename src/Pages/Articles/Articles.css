@@ -1,42 +1,27 @@
-.article-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 10px;
-  text-align: center;
-  width: 200px;
-}
-
-.article-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.articles-container {
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.articles-wrapper {
+  background-color: var(--color-bg);
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  padding-top: var(--padding-lg);
+  padding-bottom: var(--padding-lg);
 }
 
 .articles-page {
-  margin: 20px 0;
-  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--padding-md);
+}
+
+.articles-title {
+  font-family: var(--font-title);
+  color: var(--color-primary);
+  font-size: 2rem;
   text-align: center;
+  margin-bottom: var(--padding-lg);
 }
 
-.read-button {
-  background-color:  var(--gold2); 
-  color: black; 
-  border: none;
-  border-radius: 5px; 
-  padding: 10px 20px; 
-  cursor: pointer; 
-  font-size: 16px;
-  margin-top: 10px; 
-}
-
-.read-button:hover {
-  background-color:  var(--gold); /* رنگ تیره‌تر در حالت هاور */
+.articles-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--padding-lg);
 }
