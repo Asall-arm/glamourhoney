@@ -1,79 +1,70 @@
 import React, { useEffect, useState } from "react";
-import "./Features.css";
-import { FaArrowDown } from "react-icons/fa";
-import { FaArrowUp } from "react-icons/fa";
+import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
 const Features = () => {
   const [allCms, setAllCms] = useState([]);
 
   useEffect(() => {
-    getAllCms();
-  }, []);
-
-  const getAllCms = () => {
     fetch("http://localhost:3000/cms")
       .then((res) => res.json())
       .then((cms) => setAllCms(cms));
-  };
+  }, []);
 
   const cms = allCms[0] || {};
+  const parseRate = (rate) => Number((rate || "0").replace(/,/g, "")) || 0;
 
-  const rawRevenuerate = cms.revenuerate || "0";
-  const cleanedRevenuerate = rawRevenuerate.replace(/,/g, "");
-  const number1 = Number(cleanedRevenuerate) || 0;
-
-  const rawSalerate = cms.salerate || "0";
-  const cleanedSalerate = rawSalerate.replace(/,/g, "");
-  const number2 = Number(cleanedSalerate) || 0;
-
-
-  const rawCostrate = cms.costrate || "0";
-  const cleanedCostrate = rawCostrate.replace(/,/g, "");
-  const number3 = Number(cleanedCostrate) || 0;
+  const revenueRate = parseRate(cms.revenuerate);
+  const saleRate = parseRate(cms.salerate);
+  const costRate = parseRate(cms.costrate);
 
   return (
-    <div className="features">
-      <div className="featureItem">
-        <span className="featureTitle">درآمد</span>
-        <div className="featureContainer">
-          <span className="featureMoney">{cms.revenue}</span>
-          <span className="featureRate">
-            {cms.revenuerate}
-            <span className={`featureIcon ${number1 > 0 ? "positive" : "negative"}`}>
-              {number1 > 0 ? <FaArrowUp /> : <FaArrowDown />}
-            </span>
+    <div className="w-full flex flex-wrap justify-between gap-6">
+      {[
+        { title: "درآمد", value: cms.revenue, rate: cms.revenuerate, number: revenueRate },
+        { title: "فروش", value: cms.sale, rate: cms.salerate, number: saleRate },
+        { title: "هزینه", value: cms.costrate, rate: cms.costrate, number: costRate },
+      ].map((item, idx) => (
+        <div
+          key={idx}
+          className="mt-10 flex-1 min-w-[250px] bg-[var(--color-neutral)] p-6 rounded-[var(--radius-lg)] shadow-md flex flex-col gap-4"
+        >
+          <span
+            className="text-[var(--color-primary)] text-lg font-semibold"
+            style={{ fontFamily: "var(--font-title)" }}
+          >
+            {item.title}
           </span>
-        </div>
-        <span className="featureSub">مقایسه با ماه گذشته</span>
-      </div>
 
-      <div className="featureItem">
-        <span className="featureTitle">فروش</span>
-        <div className="featureContainer">
-          <span className="featureMoney">{cms.sale}</span>
-          <span className="featureRate">
-            {cms.salerate}
-            <span className={`featureIcon ${number2 > 0 ? "positive" : "negative"}`}>
-              {number2 > 0 ? <FaArrowUp /> : <FaArrowDown />}
+          <div className="flex justify-between items-center">
+            <span
+              className="text-2xl font-bold text-[var(--color-text)]"
+              style={{ fontFamily: "var(--font-primary)" }}
+            >
+              {item.value}
             </span>
-          </span>
-        </div>
-        <span className="featureSub">مقایسه با ماه گذشته</span>
-      </div>
 
-      <div className="featureItem">
-        <span className="featureTitle">هزینه</span>
-        <div className="featureContainer">
-          <span className="featureMoney">{cms.costrate}</span>
-          <span className="featureRate">
-            {cms.costrate}
-            <span className={`featureIcon ${number3 > 0 ? "positive" : "negative"}`}>
-              {number3 > 0 ? <FaArrowUp /> : <FaArrowDown />}
+            <span className="flex items-center gap-1 text-sm text-[var(--color-muted)]">
+              {item.rate}
+              <span
+                className={`ml-1 ${
+                  item.number > 0
+                    ? "text-green-600"
+                    : "text-red-600"
+                }`}
+              >
+                {item.number > 0 ? <FaArrowUp /> : <FaArrowDown />}
+              </span>
             </span>
+          </div>
+
+          <span
+            className="text-sm text-[var(--color-muted)]"
+            style={{ fontFamily: "var(--font-secondary)" }}
+          >
+            مقایسه با ماه گذشته
           </span>
         </div>
-        <span className="featureSub">مقایسه با ماه گذشته</span>
-      </div>
+      ))}
     </div>
   );
 };

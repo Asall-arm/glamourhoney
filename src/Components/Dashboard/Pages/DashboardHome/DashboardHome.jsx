@@ -8,17 +8,15 @@ import EndlessFooter from "../../../Footer/EndlessFooter";
 
 const Dashboard = () => {
   return (
-    <>
+    <div className="dashboard-container">
       <Sidebar />
       <div className="dashboard-main">
         <Header />
-        <Features />
-        <Chart
-        grid title="فروش ماهانه" dataKey="sale"
-         />
+        <Features className="features" />
+        <Chart grid title="فروش ماهانه" dataKey="sale" />
+        <EndlessFooter />
       </div>
-      <EndlessFooter />
-    </>
+    </div>
   );
 };
 

@@ -2,18 +2,18 @@
 /* -----------------------------
    فونت‌های فارسی  CDN
 ----------------------------- */
-@import url('https://cdn.fontcdn.ir/Font/Persian/Vazirmatn/Vazirmatn.css');
-@import url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css');
-@import url('https://cdn.fontcdn.ir/Font/Persian/Estedad/Estedad.css');
+@import url("https://cdn.fontcdn.ir/Font/Persian/Vazirmatn/Vazirmatn.css");
+@import url("https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css");
+@import url("https://cdn.fontcdn.ir/Font/Persian/Estedad/Estedad.css");
 
 /* -----------------------------
     تعریف متغیرها (CSS Variables)
 ----------------------------- */
 :root {
   /* --- Primary Palette --- */
-  --color-primary: #1A1A1A;    
-  --color-honey: #D4AF37;      
-  --color-neutral: #EFEFEF;   
+  --color-primary: #1a1a1a;
+  --color-honey: #d4af37;
+  --color-neutral: #efefef;
 
   /* --- Extended Colors --- */
   --color-bg: #ffffff;
@@ -28,9 +28,9 @@
   --color-button-hover: #c89f2a;
 
   /* --- Font Families --- */
-  --font-primary: 'Vazirmatn', sans-serif;
-  --font-secondary: 'Estedad', sans-serif;
-  --font-title: 'Shabnam', sans-serif;
+  --font-primary: "Vazirmatn", sans-serif;
+  --font-secondary: "Estedad", sans-serif;
+  --font-title: "Shabnam", sans-serif;
 
   /* --- Spacing & Radius --- */
   --radius-sm: 4px;
@@ -49,8 +49,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
 }
 
 /* -----------------------------
@@ -65,7 +65,12 @@ body {
   direction: rtl;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-title);
   color: var(--color-primary);
 }

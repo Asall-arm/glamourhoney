@@ -2,80 +2,71 @@ import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <aside className="bg-[#EFEFEF] text-[#2e2e2e] w-64 min-h-screen pt-0 p-6 font-[Vazirmatn] fixed top-0 right-0 z-10 shadow-lg">
-      <div className="mb-8 mt-0">
-        <h2 className="text-xl font-[Shabnam] text-[#1A1A1A] mb-1">
+    <aside
+      className="w-48 min-h-screen p-6 fixed top-2 right-0 z-10 shadow-lg"
+      style={{
+        backgroundColor: "var(--color-neutral)",
+        color: "var(--color-text)",
+        fontFamily: "var(--font-primary)",
+      }}
+    >
+
+      <div className="leading-tight">
+        <h2
+          className="text-xl mb-0"
+          style={{
+            fontFamily: "var(--font-title)",
+            color: "var(--color-primary)",
+            marginBottom: "0.5rem", 
+            marginTop: "0",
+          }}
+        >
           سلام عسل 🌼
         </h2>
-        <p className="text-sm font-[Estedad] text-[#999999]">خوش برگشتی</p>
+        <h2
+          className="text-sm"
+          style={{
+            fontFamily: "var(--font-secondary)",
+            color: "var(--color-muted)",
+            marginBottom: "1rem",
+            marginTop: "0",
+          }}
+        >
+          خوش برگشتی
+        </h2>
       </div>
 
-      <nav className="flex flex-col gap-4 text-base font-[Estedad]">
-        <NavLink
-          to="/dashboard"
-          className={({ isActive }) =>
-            `py-2 px-4 rounded-md ${
-              isActive ? "bg-[#D4AF37] text-white font-bold" : "text-[#2e2e2e]"
-            }`
-          }
-        >
-          صفحه اصلی
-        </NavLink>
-
-        <NavLink
-          to="/dashboard/amountproducts"
-          className={({ isActive }) =>
-            `py-2 px-4 rounded-md ${
-              isActive ? "bg-[#D4AF37] text-white font-bold" : "text-[#2e2e2e]"
-            }`
-          }
-        >
-          مقدار محصولات
-        </NavLink>
-
-        <NavLink
-          to="/dashboard/comments"
-          className={({ isActive }) =>
-            `py-2 px-4 rounded-md ${
-              isActive ? "bg-[#D4AF37] text-white font-bold" : "text-[#2e2e2e]"
-            }`
-          }
-        >
-          کامنت‌ها
-        </NavLink>
-
-        <NavLink
-          to="/dashboard/users"
-          className={({ isActive }) =>
-            `py-2 px-4 rounded-md ${
-              isActive ? "bg-[#D4AF37] text-white font-bold" : "text-[#2e2e2e]"
-            }`
-          }
-        >
-          کاربران
-        </NavLink>
-
-        <NavLink
-          to="/dashboard/orders"
-          className={({ isActive }) =>
-            `py-2 px-4 rounded-md ${
-              isActive ? "bg-[#D4AF37] text-white font-bold" : "text-[#2e2e2e]"
-            }`
-          }
-        >
-          سفارشات
-        </NavLink>
-
-        <NavLink
-          to="/dashboard/theme"
-          className={({ isActive }) =>
-            `py-2 px-4 rounded-md ${
-              isActive ? "bg-[#D4AF37] text-white font-bold" : "text-[#2e2e2e]"
-            }`
-          }
-        >
-          تنظیم رنگ‌ها
-        </NavLink>
+      <nav
+        className="flex flex-col gap-3 text-base mt-4"
+        style={{ fontFamily: "var(--font-secondary)" }}
+      >
+        {[
+          { to: "/dashboard", label: "صفحه اصلی" },
+          { to: "/dashboard/amountproducts", label: "مقدار محصولات" },
+          { to: "/dashboard/comments", label: "کامنت‌ها" },
+          { to: "/dashboard/users", label: "کاربران" },
+          { to: "/dashboard/orders", label: "سفارشات" },
+          { to: "/dashboard/theme", label: "تنظیم رنگ‌ها" },
+        ].map((item) => (
+          <NavLink
+            key={item.to}
+            to={item.to}
+            className={({ isActive }) =>
+              `py-2 px-4 rounded-md transition-colors duration-300 ${
+                isActive ? "font-bold" : ""
+              }`
+            }
+            style={({ isActive }) => ({
+              backgroundColor: isActive ? "var(--color-honey)" : "transparent",
+              color: isActive
+                ? "var(--color-button-text)"
+                : "var(--color-text)",
+              marginRight: "0.75rem",
+            })}
+          >
+            {item.label}
+          </NavLink>
+        ))}
       </nav>
     </aside>
   );
